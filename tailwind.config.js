@@ -9,7 +9,41 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'orange-button': '#fb923c',
+      },
+      
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.btn': {
+          background: '#f857a6',
+          padding: '12px 15px',
+          textAlign: 'center',
+          display:'block',
+          color: 'white',
+          borderRadius: '8px',
+        },
+        '.btn-search': {
+          background: '#f857a6',
+          padding: '12px 15px',
+          textAlign: 'center',
+          display:'block',
+          color: 'white',
+          borderTopRightRadius:'8px',
+          borderBottomRightRadius:'8px',
+        },
+
+        '.logo-underline':{
+            textDecorationLine: 'underline',
+            textDecorationStyle: "solid",
+            textDecorationColor: '#f857a6',
+            textDecorationThickness: '5px',
+        }
+      });
+    }
+  ],
 }
