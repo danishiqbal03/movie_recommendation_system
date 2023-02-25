@@ -1,19 +1,21 @@
 import Image from 'next/image'
 import MainCard from '../cards/MainCard'
-
+import MainSearch from '../search/MainSearch'
+import tp_1 from '../../public/banner/svg/tp_excellent.svg'
+import tp_2 from '../../public/banner/svg/truspilot_5star_svg.svg'
+import tp_3 from '../../public/banner/svg/trustpilot_svg.svg'
 function MainBanner({img_url}) {
   return (
-    <div className='relative bg-black pb-20'>
+    <div className='relative bg-black pb-10'>
         <div className='max-w-7xl relative m-auto grid grid-cols-4'>
           <div className='order-1 col-span-2 mr-auto my-auto w-full h-full flex flex-col justify-start items-start'>
             <h1 className='text-6xl text-white font-bold mb-20'>Lights, Camera, Recommendation! Find Your Perfect Movie Match Today!</h1>
-            <form className='flex items-center bg-[#dff9fb] p-5 rounded-lg w-full'>
-              <select className='hidden'>
-                <option></option>
-              </select>
-              <input type='text' placeholder="&#127871; ready? Find the perfect movie to match" className='w-[80%] h-12 px-4 placeholder:text-[#535c68] focus:outline-0		'/>
-              <button className='btn-search w-[20%] whitespace-nowrap	'>Explore now</button>
-            </form>
+            <MainSearch/>
+            <div className='flex gap-6 items-center mt-12'>
+              <Image src={tp_1} alt='' className='' />
+              <Image src={tp_2} alt='' className='' />
+              <Image src={tp_3} alt='' className='' />
+            </div>
           </div>
           <div className='order-2 col-span-2'>
             <Image 
